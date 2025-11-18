@@ -1,0 +1,245 @@
+<!doctype html>
+<html lang="vi">
+    <head>
+        <meta charset="utf-8" />
+        <script>
+            /**
+             * This script is used to clear local storage when the version of the app is changed.
+             * This is useful when we have some breaking changes in the app and we want to clear the local storage.
+             * CI/CD will replace 1ab9aa9c with the current version of the app.
+             */
+            if (localStorage.getItem("f8:version") !== "1ab9aa9c") {
+                localStorage.clear();
+                localStorage.setItem("f8:version", "1ab9aa9c");
+            }
+
+            /**
+             * Redirect to the new domain if the app is running on localhost.
+             */
+            if (location.hostname === "localhost") {
+                location.replace("https://f8team.local2");
+            }
+        </script>
+
+        <!-- Metas -->
+        <link rel="preconnect" href="https://cdn.f8team.dev" />
+
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="theme-color" content="#000000" />
+
+        <title>F8 - Học Lập Trình Để Đi Làm</title>
+
+        <!-- Styles -->
+        <link
+            rel="stylesheet"
+            href="https://cdn.f8team.dev/static/css/reset.css"
+        />
+        <link
+            rel="stylesheet"
+            href="https://cdn.f8team.dev/static/css/grid.css"
+        />
+        <link
+            rel="stylesheet"
+            href="https://cdn.f8team.dev/static/services/comment-app/styles.css?v=1ab9aa9c"
+        />
+        <link
+            rel="stylesheet"
+            href="https://cdn.f8team.dev/static/css/prism.css"
+        />
+        <link
+            rel="stylesheet"
+            href="https://cdn.f8team.dev/static/fonts/styles.css"
+        />
+        <link
+            rel="stylesheet"
+            href="https://cdn.f8team.dev/static/libs/monaco-editor/vs/editor/editor.main.css"
+        />
+
+        <!-- Favicon -->
+        <link
+            rel="apple-touch-icon"
+            sizes="180x180"
+            href="/favicon/apple-touch-icon.png"
+        />
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="32x32"
+            href="/favicon/favicon_32x32.png"
+        />
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="16x16"
+            href="/favicon/favicon_16x16.png"
+        />
+        <link rel="manifest" href="/favicon/site.webmanifest" />
+        <link
+            rel="mask-icon"
+            href="/favicon/safari-pinned-tab.svg"
+            color="#5bbad5"
+        />
+        <meta name="msapplication-TileColor" content="#da532c" />
+        <meta name="theme-color" content="#ffffff" />
+
+        <style>
+            :root {
+                --primary-color: #f05123;
+                --black-color: #000;
+                --white-color: #fff;
+                --gray-color: #666;
+                --text-color: #333;
+                --plum-color: #b80257;
+                --fb-color: #4080ff;
+                --mail-color: #f47425;
+                --invalid-color: #f33a58;
+                --desc-color: #0000008a;
+                --first-color: #1dbfaf;
+                --second-color: #1dbfaf;
+                --button-color: #1dbfaf;
+                --button-image: linear-gradient(
+                    70.06deg,
+                    #2cccff -5%,
+                    #22dfbf 106%
+                );
+
+                --system-ui:
+                    system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif,
+                    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+                --font-code: "SF Mono", monospace;
+
+                --header-height: 66px;
+                --layout-sidebar-width: 96px;
+            }
+
+            *,
+            *::before,
+            *::after {
+                box-sizing: border-box;
+            }
+
+            html {
+                font-size: 62.5%;
+            }
+
+            body {
+                font-size: 1.6rem;
+                font-family: var(--system-ui);
+                text-rendering: optimizeLegibility;
+                -moz-osx-font-smoothing: grayscale;
+                -webkit-font-smoothing: antialiased;
+                overflow-y: auto;
+                overscroll-behavior: none;
+                touch-action: manipulation;
+                -webkit-user-drag: none;
+                -ms-content-zooming: none;
+            }
+
+            body.show-notification #header {
+                top: 50px !important;
+            }
+
+            body.show-notification #sidebar {
+                top: 130px;
+            }
+        </style>
+      <script type="module" crossorigin src="/assets/index-DF1Bsg9L.js"></script>
+      <link rel="stylesheet" crossorigin href="/assets/index-24S6GhfI.css">
+    </head>
+    <body>
+        <div id="root"></div>
+        <script>
+            window.global = window;
+        </script>
+
+        <script src="https://cdn.f8team.dev/static/libs/react.production.min.js"></script>
+        <script src="https://cdn.f8team.dev/static/libs/react-dom.production.min.js"></script>
+
+        <!-- Common dependencies -->
+        <script src="https://cdn.f8team.dev/static/libs/moment.min.js"></script>
+        <script src="https://cdn.f8team.dev/static/libs/moment-vi.min.js"></script>
+
+        <script src="https://cdn.f8team.dev/static/libs/axios.min.js"></script>
+        <script src="https://cdn.f8team.dev/static/services/http-request.js"></script>
+
+        <script src="https://cdn.f8team.dev/static/libs/pusher.min.js"></script>
+        <script src="https://cdn.f8team.dev/static/libs/echo.iife.min.js"></script>
+        <script src="https://cdn.f8team.dev/static/services/socket-client.js"></script>
+
+        <script src="https://cdn.f8team.dev/static/libs/lodash.min.js"></script>
+        <script src="https://cdn.f8team.dev/static/libs/react-redux.min.js"></script>
+        <script src="https://cdn.f8team.dev/static/libs/slate.min.js"></script>
+        <script src="https://cdn.f8team.dev/static/libs/slate-react.min.js"></script>
+        <script src="https://cdn.f8team.dev/static/libs/slate-history.min.js"></script>
+        <script src="https://cdn.f8team.dev/static/libs/prism.min.js"></script>
+        <script src="https://cdn.f8team.dev/static/libs/prism-c.min.js"></script>
+        <script src="https://cdn.f8team.dev/static/libs/prism-cpp.min.js"></script>
+        <script src="https://cdn.f8team.dev/static/libs/prism-scss.min.js"></script>
+        <script src="https://cdn.f8team.dev/static/libs/prism-jsx.min.js"></script>
+        <script src="https://cdn.f8team.dev/static/libs/prism-json.min.js"></script>
+        <script src="https://cdn.f8team.dev/static/libs/prism-sql.min.js"></script>
+        <script src="https://cdn.f8team.dev/static/libs/prism-bash.min.js"></script>
+        <script src="https://cdn.f8team.dev/static/libs/prism-line-numbers.min.js"></script>
+        <script src="https://cdn.f8team.dev/static/libs/prism-toolbar.min.js"></script>
+        <script src="https://cdn.f8team.dev/static/libs/prism-copy-to-clipboard.min.js"></script>
+        <script src="https://cdn.f8team.dev/static/libs/purify.min.js"></script>
+        <script src="https://cdn.f8team.dev/static/libs/redux-toolkit.min.js"></script>
+        <script src="https://cdn.f8team.dev/static/libs/rtk-query.min.js"></script>
+        <script src="https://cdn.f8team.dev/static/libs/react-modal.min.js"></script>
+        <script src="https://cdn.f8team.dev/static/libs/react-infinite-scroll-component.min.js"></script>
+
+        <!-- Monaco editor -->
+        <script src="https://cdn.f8team.dev/static/libs/monaco-editor/vs/loader.js"></script>
+        <script>
+            let vs = "https://cdn.f8team.dev/static/libs/monaco-editor/vs";
+            require.config({ paths: { vs } });
+        </script>
+        <script src="https://cdn.f8team.dev/static/libs/monaco-editor/vs/editor/editor.main.js"></script>
+        <script src="https://cdn.f8team.dev/static/libs/emmet-monaco.min.js"></script>
+
+        <!-- Main app -->
+
+        <!-- Comment app -->
+        <script
+            type="module"
+            src="https://cdn.f8team.dev/static/services/comment-app/app.js?v=1ab9aa9c"
+        ></script>
+
+        <!-- Meta Pixel Code -->
+        <script>
+            !(function (f, b, e, v, n, t, s) {
+                if (f.fbq) return;
+                n = f.fbq = function () {
+                    n.callMethod
+                        ? n.callMethod.apply(n, arguments)
+                        : n.queue.push(arguments);
+                };
+                if (!f._fbq) f._fbq = n;
+                n.push = n;
+                n.loaded = !0;
+                n.version = "2.0";
+                n.queue = [];
+                t = b.createElement(e);
+                t.async = !0;
+                t.src = v;
+                s = b.getElementsByTagName(e)[0];
+                s.parentNode.insertBefore(t, s);
+            })(
+                window,
+                document,
+                "script",
+                "https://connect.facebook.net/en_US/fbevents.js"
+            );
+            fbq("init", "921776002312242");
+        </script>
+        <noscript
+            ><img
+                height="1"
+                width="1"
+                style="display: none"
+                src="https://www.facebook.com/tr?id=921776002312242&ev=PageView&noscript=1"
+        /></noscript>
+        <!-- End Meta Pixel Code -->
+    <script defer src="https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015" integrity="sha512-ZpsOmlRQV6y907TI0dKBHq9Md29nnaEIPlkf84rnaERnq6zvWvPUqr2ft8M1aS28oN72PdrCzSjY4U6VaAw1EQ==" data-cf-beacon='{"version":"2024.11.0","token":"43e21661ceb14b1c833d584b5a3c4a47","r":1,"server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
+</body>
+</html>

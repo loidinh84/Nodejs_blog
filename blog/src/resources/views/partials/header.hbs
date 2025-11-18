@@ -1,0 +1,77 @@
+<!-- src/resources/views/partials/header.hbs -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary shadow-sm">
+  <div class="container-fluid px-4">
+    <!-- container để căn giữa và đẹp -->
+
+    <!-- Logo / Tên blog -->
+    <a class="navbar-brand fw-bold" href="/">
+      <img
+        src="/img/logo.png"
+        alt="Logo"
+        width="40"
+        height="40"
+        class="d-inline-block align-text-top me-2 rounded"
+      />
+      Thành Lợi
+    </a>
+
+    <!-- Nút hamburger trên mobile -->
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarNav"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Menu chính -->
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav me-auto">
+        <li class="nav-item">
+          <a class="nav-link {{active.home}}" href="/">Trang chủ</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link {{active.news}}" href="/news">Tin tức</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a
+            class="nav-link dropdown-toggle"
+            href="#"
+            role="button"
+            data-bs-toggle="dropdown"
+          >
+            Danh mục
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Lập trình</a></li>
+            <li><a class="dropdown-item" href="#">Thiết kế</a></li>
+            <li><a class="dropdown-item" href="#">Cuộc sống</a></li>
+            <li><hr class="dropdown-divider" /></li>
+            <li><a class="dropdown-item" href="#">Tất cả bài viết</a></li>
+          </ul>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/about">Giới thiệu</a>
+        </li>
+      </ul>
+
+      <!-- Tìm kiếm + nút đăng nhập -->
+      <form class="d-flex me-3" action="/search" method="GET">
+        <input
+          class="form-control me-2"
+          type="search"
+          name="q"
+          placeholder="Tìm kiếm..."
+          aria-label="Search"
+        />
+        <button class="btn btn-outline-light" type="submit">Tìm</button>
+      </form>
+
+      <div class="d-flex">
+        <a href="/login" class="btn btn-outline-light me-2">Đăng nhập</a>
+        <a href="/register" class="btn btn-light text-primary">Đăng ký</a>
+      </div>
+    </div>
+  </div>
+</nav>
