@@ -25,7 +25,10 @@
     "morgan": "^1.10.1"
   },
   "devDependencies": {
+    "husky": "^9.1.7",
+    "lint-staged": "^16.2.6",
     "nodemon": "^3.1.11",
+    "prettier": "^3.6.2",
     "sass": "^1.94.0"
   }
 }
